@@ -13,7 +13,7 @@ const baseStyle = definePartsStyle(props => ({
         padding: 8,
         width: '100%',
         _placeholder: {
-            color: mode('#1f1f1f', '#dbdbdb')(props),
+            color: mode('primary', 'secondary')(props),
         },
     },
 }));
