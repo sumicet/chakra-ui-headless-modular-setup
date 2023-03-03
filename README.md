@@ -15,7 +15,9 @@ This is an example of how to set up Chakra-UI in a headless & modular manner, wi
 
 ## Installation
 
-`npm i @chakra-ui/provider @chakra-ui/theme @chakra-ui/anatomy @chakra-ui/system @emotion/react @emotion/styled framer-motion`
+```
+npm i @chakra-ui/provider @chakra-ui/theme @chakra-ui/anatomy @chakra-ui/system @emotion/react @emotion/styled framer-motion
+```
 
 ## Create the `theme` folder
 
