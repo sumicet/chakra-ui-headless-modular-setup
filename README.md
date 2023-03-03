@@ -20,7 +20,7 @@ Chakra-UI version at the time of writing: `2.5.1`.
 npm i @chakra-ui/provider @chakra-ui/theme @chakra-ui/anatomy @chakra-ui/system @emotion/react @emotion/styled framer-motion
 ```
 
-If the `@chakra-ui` components you install don't use `framer-motion`, you can skip it.
+You can skip `framer-motion` if the `@chakra-ui` components you install don't use it.
 
 ## Create the `theme` folder
 
