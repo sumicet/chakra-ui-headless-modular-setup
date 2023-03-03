@@ -204,10 +204,11 @@ Note: You might get an error about `"type": "module"`. Removing it is one way to
 solve the issue, but probably not the recommended solution for all projects.
 ## FAQ
 
-##### How do I know which package to install if I want to use component X?
+#### How do I know which package to install if I want to use component X?
 The name of the packages are written in the documentation, at the top of the
 page, under the description.
+
 ![npm package](https://i.gyazo.com/1510078e653ff46772e89ba83f37cd23.png)
 
-##### How do I know how to call the files inside `components`?
+#### How to call the files inside `components`?
 The names of the files inside `components` usually correspond to the name in lower case of the component you're looking to style. You can also check the [official `components` folder](https://github.com/chakra-ui/chakra-ui/tree/main/packages/components/theme/src/components) if you get confused.
