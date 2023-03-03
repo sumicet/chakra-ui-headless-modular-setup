@@ -1,14 +1,17 @@
-# chakra-ui-headless-setup
+# Chakra-UI Headless & Modular Setup
 
-This is an example of how to setup Chakra-UI in a headless manner, without using the predefined theme.
+This is an example of how to setup Chakra-UI in a headless & modular manner, without using the predefined theme.
 
-Folder structure
-- `theme`
-    - `foundations`
-    - `components`
+- [Installation](#installation)
+- [Create the `theme` folder](#create-the-theme-folder)
+- [Add the provider](#add-the-provider)
+- [Configure `foundations`](#configure-foundations)
+- [Configure `components`](#configure-components)
+    - [Single part components: `Text` example](#single-part-components-text-example)
+    - [Multipart components: `Input` example](#multipart-components-input-example)
+- [Generate typings for your theme](#generate-typings-for-your-theme)
+- [FAQ](#faq)
 
-
-# Step by step guide
 
 ## Installation
 
@@ -57,7 +60,7 @@ export const foundations = {};
 ## Add the provider
 
 ```tsx
-// Entry point of the application (usually `index.tsx` or `main.tsx` if you're using Vite)
+// Entry point of the application
 import { theme } from './theme';
 
 <ChakraProvider theme={theme}>
@@ -91,12 +94,13 @@ export const foundations = {
 };
 ```
 
-## Style `components`
+## Configure `components`
 
-### `Text` example
+Chakra-UI has 2 types of components: single part components (eg `Text`, `Spinner`, etc.) and multipart components (`Input`, `Modal`, etc.).
+
+### Single part components: `Text` example
 1. `npm i @chakra-ui/layout`
 2. Create a new file inside `components` called `text.ts`.
-4. Create a new `text.ts` file inside `components`
 ```typescript
 // theme/components/text.ts
 
@@ -111,7 +115,7 @@ const baseStyle = defineStyle(props => ({
 
 export const Text = defineStyleConfig({ baseStyle });
 ```
-5. Add `Text` to `components`
+3. Add `Text` to `components`
 ```typescript
 // theme/components/index.ts
 
@@ -121,18 +125,18 @@ export const components = {
     Text,
 };
 ```
-6. You're done! Usage
+4. You're done! Usage:
 ```tsx
 import { Text } from '@chakra-ui/layout';
 ...
 <Text>Hello!</Text>
 ```
 
-### `Input` example
+### Multipart components: `Input` example
 
 1. `npm i @chakra-ui/input`
 2. Create a new file inside `components` called `input.ts`. We can now follow the steps from the [official documentation](https://chakra-ui.com/docs/components/input/theming#customizing-the-default-theme).
-4. Create a new `input.ts` file inside `components`
+3. Create a new `input.ts` file inside `components`
 ```typescript
 // theme/components/input.ts
 
@@ -160,7 +164,7 @@ const baseStyle = definePartsStyle(props => ({
 
 export const Input = defineMultiStyleConfig({ baseStyle });
 ```
-5. Add `Input` to `components`
+4. Add `Input` to `components`
 ```typescript
 // theme/components/index.ts
 
@@ -172,7 +176,7 @@ export const components = {
     Input,
 };
 ```
-6. You're done! Usage
+5. You're done! Usage:
 ```tsx
 import { Input } from '@chakra-ui/input';
 ...
@@ -183,26 +187,22 @@ import { Input } from '@chakra-ui/input';
 
 Follow the steps from the [official documentation](https://chakra-ui.com/docs/styled-system/cli).
 
-1. Add a command
+1. Update `scripts`
 ```json
-// package.json
 {
-  ...
   "scripts": {
-    ...
-    "theme": "chakra-cli tokens theme",
-    "theme:watch": "chakra-cli tokens theme --watch",
+    "theme": "chakra-cli tokens src/theme",
+    "theme:watch": "chakra-cli tokens src/theme --watch"
   },
-  ...
 }
 ```
-2. `npm run theme:watch`
+2. `npm run theme`
 
 Note: You might have to restart VSCode to see the changes.
 
 Note: You might get an error about `"type": "module"`. Removing it is one way to
 solve the issue, but probably not the recommended solution for all projects.
-# FAQ
+## FAQ
 
 ##### How do I know which package to install if I want to use component X?
 The name of the packages are written in the documentation, at the top of the
