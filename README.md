@@ -12,6 +12,7 @@ This is an example of how to set up Chakra-UI in a headless & modular manner, wi
 - [Generate typings for your theme](#generate-typings-for-your-theme)
 - [FAQ](#faq)
 
+Chakra-UI version at the time of writing: `2.5.1`.
 
 ## Installation
 
