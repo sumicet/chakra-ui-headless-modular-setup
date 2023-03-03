@@ -215,5 +215,5 @@ page, under the description.
 
 ![npm package](https://i.gyazo.com/1510078e653ff46772e89ba83f37cd23.png)
 
-#### How to call the files inside `components`?
-The names of the files inside `components` usually correspond to the name in lower case of the component you're looking to style. You can also check the [official `components` folder](https://github.com/chakra-ui/chakra-ui/tree/main/packages/components/theme/src/components) if you get confused.
+#### How to call the files inside the `components` folder?
+The names of the files inside the `components` folder usually correspond to the name in lower case of the component you're looking to style. You can also check the [official `components` folder](https://github.com/chakra-ui/chakra-ui/tree/main/packages/components/theme/src/components) if you get confused.
