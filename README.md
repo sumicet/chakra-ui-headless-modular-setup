@@ -192,7 +192,7 @@ import { Input } from '@chakra-ui/input';
 
 Follow the steps from the [official documentation](https://chakra-ui.com/docs/styled-system/cli).
 
-1. Update `scripts`
+1. Update `scripts` inside `package.json`
 ```json
 {
   "scripts": {
