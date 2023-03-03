@@ -1,6 +1,6 @@
 # Chakra-UI Headless & Modular Setup
 
-This is an example of how to setup Chakra-UI in a headless & modular manner, without using the predefined theme.
+This is an example of how to set up Chakra-UI in a headless & modular manner, without using the predefined theme.
 
 - [Installation](#installation)
 - [Create the `theme` folder](#create-the-theme-folder)
